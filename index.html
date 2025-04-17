@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Voice</title>
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition min-h-screen flex items-center justify-center text-gray-800 dark:text-white">
+    
+    <!-- Theme Toggle Button -->
+    <div class="absolute top-4 right-4">
+      <button id="theme-toggle" class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-2 rounded-full shadow-lg hover:scale-110 transform transition">
+        🌙
+      </button>
+    </div>
+
+    <!-- Glass UI Card -->
+    <div class="glass-card w-full max-w-md space-y-5 text-center p-8 rounded-3xl shadow-xl animate-fadeIn">
+      <h1 class="text-4xl font-extrabold">🔊 Text to Voice</h1>
+
+      <textarea
+        id="text-input"
+        rows="4"
+        placeholder="Type your message here..."
+        class="w-full rounded-xl p-4 text-gray-800 dark:text-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 resize-none focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+      ></textarea>
+
+      <select
+        id="voice-select"
+        class="w-full rounded-xl p-3 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+      ></select>
+
+      <button
+        id="speak-btn"
+        class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 w-full rounded-xl shadow-lg transition-all transform hover:scale-105"
+      >
+        🎤 Speak It
+      </button>
+    </div>
+  </body>
+</html>
